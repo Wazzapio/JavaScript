@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        /*
+        4. Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя параметрами.
+        Т.е. например, функция для сложения должна принимать два числа, складывать их и возвращать результат.
+        Обязательно использовать оператор return.
+        */
+
+        /**
+         * Функция складывает два числа.
+         */
+        function sum(a, b) {
+            return a + b;
+        }
+
+        /**
+         * Функция вычитает из одного числа другое.
+         */
+        function sub(a, b) {
+            return a - b;
+        }
+
+        /**
+         * Функция делит одно число на другое.
+         */
+        function div(a, b) {
+            return a / b;
+        }
+
+        /**
+         * Функция умножает одно число на другое.
+         */
+        function mul(a, b) {
+            return a * b;
+        }
+
+        let num1 = 5;
+        let num2 = 3;
+        let summ = sum(num1, num2);
+        let subtraction = sub(num1, num2);
+        let divide = div(num1, num2);
+        let multiplication = mul(num1, num2);
+
+        alert(`${num1} + ${num2} = ${summ}`);
+        alert(`${num1} - ${num2} = ${subtraction}`);
+        alert(`${num1} / ${num2} = ${divide}`);
+        alert(`${num1} * ${num2} = ${multiplication}`);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict'
+
+        /*
+        5. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation),
+        где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
+        переданного значения операции (использовать switch) выполнить одну из арифметических операций
+        (использовать функции из задания 4) и вернуть полученное значение.
+        */
+
+        /**
+         * Функция складывает два числа.
+         */
+        function sum(a, b) {
+            return a + b;
+        }
+
+        /**
+         * Функция вычитает из одного числа другое.
+         */
+        function sub(a, b) {
+            return a - b;
+        }
+
+        /**
+         * Функция делит одно число на другое.
+         */
+        function div(a, b) {
+            return a / b;
+        }
+
+        /**
+         * Функция умножает одно число на другое.
+         */
+        function mul(a, b) {
+            return a * b;
+        }
+
+        /**
+         * Функция принимает два числа и название операции.
+         * Выполняет вычисление и выводит результат.
+         */
+        function mathOperation(arg1, arg2, operation) {
+            let result = "";
+            switch (operation) {
+                case "+":
+                    result = sum(arg1, arg2);
+                    return alert(`${arg1} + ${arg2} = ${result}`);
+                case "-":
+                    result = sub(arg1, arg2);
+                    return alert(`${arg1} - ${arg2} = ${result}`);
+                case "/":
+                    result = div(arg1, arg2);
+                    return alert(`${arg1} / ${arg2} = ${result}`);
+                case "*":
+                    result = mul(arg1, arg2);
+                    return alert(`${arg1} * ${arg2} = ${result}`);
+            }
+        }
+
+        let arg1 = +prompt("Введите первое число:");
+        let arg2 = +prompt("Введите второе число:");
+        let operation = prompt("Какую операцию выполнить? (+, -, /, *)")
+
+        mathOperation(arg1, arg2, operation);
+
+    </script>
+</body>
+
+</html>
